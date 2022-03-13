@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pas",
+  "version": "${version}",
+
+  "name": "Pain And Suffering Mod",
+  "description": "A mod from the Pain and Suffering group.",
+  "authors": ["Me!"],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/pas/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": ["net.painandsuffering.pas.PaSMainMod"]
+  },
+  "mixins": ["pas.mixins.json"],
+
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17",
+    "fabric-key-binding-api-v1": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
