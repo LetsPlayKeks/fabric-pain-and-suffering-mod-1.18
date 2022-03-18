@@ -1,6 +1,6 @@
 package net.painandsuffering.pas;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+//import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -13,6 +13,7 @@ public class PaSItems {
 			));*/
 	
 	
+	@SuppressWarnings("unused")
 	private static Item registerItem(String name, Item item) {
 		return Registry.register(Registry.ITEM, new Identifier(PaSMainMod.MOD_ID, name), item);
 	}
