@@ -11,6 +11,15 @@ public class PaSItems {
 			.maxCount(1)
 			.group(PaSMainMod.PAS_MISC_GROUP)
 			));
+	public static final Item DEV_FLYINGFOXX = registerItem("dev_flyingfoxx", new Item(new FabricItemSettings()
+			.maxCount(1)
+			.group(PaSMainMod.PAS_MISC_GROUP)
+			));
+	public static final Item COOKIE_DOUGH = registerItem("cookie_dough", new Item(new FabricItemSettings()
+			.maxCount(16)
+			.group(PaSMainMod.PAS_FOOD_GROUP)
+			));
+	
 	
 	private static Item registerItem(String name, Item item) {
 		return Registry.register(Registry.ITEM, new Identifier(PaSMainMod.MOD_ID, name), item);

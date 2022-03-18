@@ -25,7 +25,7 @@ public class PaSMainMod implements ModInitializer {
 	
 	public static final ItemGroup PAS_FOOD_GROUP = FabricItemGroupBuilder.create(
 			new Identifier(MOD_ID, "food"))
-			.icon(() -> new ItemStack(Items.AIR))
+			.icon(() -> new ItemStack(PaSItems.COOKIE_DOUGH))
 			.build();
 	
 	public static final ItemGroup PAS_BLOCK_GROUP = FabricItemGroupBuilder.create(
@@ -48,7 +48,6 @@ public class PaSMainMod implements ModInitializer {
 		
 		Registry.register(Registry.BLOCK, new Identifier("the_curse", "test_item"), CURSE);
 		Registry.register(Registry.ITEM, new Identifier("the_curse", "test_item"), new BlockItem(CURSE, new FabricItemSettings().group(PaSMainMod.PAS_FOOD_GROUP)));
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cookie_dough"), new Item(new FabricItemSettings().group(PaSMainMod.PAS_FOOD_GROUP)));
 		
 				
 		LOGGER.info("Hello Fabric world!");
