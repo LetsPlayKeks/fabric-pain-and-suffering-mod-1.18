@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -25,7 +24,7 @@ public class PaSMainMod implements ModInitializer {
 	
 	public static final ItemGroup PAS_FOOD_GROUP = FabricItemGroupBuilder.create(
 			new Identifier(MOD_ID, "food"))
-			.icon(() -> new ItemStack(PaSItems.COOKIE_DOUGH))
+			.icon(() -> new ItemStack(PaSFood.COOKIE_DOUGH))
 			.build();
 	
 	public static final ItemGroup PAS_BLOCK_GROUP = FabricItemGroupBuilder.create(
@@ -34,10 +33,9 @@ public class PaSMainMod implements ModInitializer {
 			.build();
 	public static final ItemGroup PAS_MISC_GROUP = FabricItemGroupBuilder.create(
 			new Identifier(MOD_ID, "block"))
-			.icon(() -> new ItemStack(PaSItems.DEV_LETSPLAYKEKS_ITEM))
+			.icon(() -> new ItemStack(PaSItemsMisc.DEV_LETSPLAYKEKS))
 			.build();
 	
-	public static final Item COOKIE_DOUGH = new Item(new FabricItemSettings().group(PaSMainMod.PAS_FOOD_GROUP).maxCount(16));
 	public static final Block CURSE = new Block(FabricBlockSettings.of(Material.SOIL).build());
 	
 
@@ -45,6 +43,8 @@ public class PaSMainMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		PaSItems.registerModItems();
+		PaSFood.registerModFood();
+		PaSItemsMisc.registerModItems();
 		
 		Registry.register(Registry.BLOCK, new Identifier("the_curse", "test_item"), CURSE);
 		Registry.register(Registry.ITEM, new Identifier("the_curse", "test_item"), new BlockItem(CURSE, new FabricItemSettings().group(PaSMainMod.PAS_FOOD_GROUP)));
