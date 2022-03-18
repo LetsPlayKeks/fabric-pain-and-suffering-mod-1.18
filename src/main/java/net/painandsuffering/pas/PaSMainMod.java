@@ -20,16 +20,21 @@ import org.slf4j.LoggerFactory;
 @SuppressWarnings("deprecation")
 public class PaSMainMod implements ModInitializer {
 	
-	public static final Logger LOGGER = LoggerFactory.getLogger("pas");
+	public static String MOD_ID = "pas";
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	
 	public static final ItemGroup PAS_FOOD_GROUP = FabricItemGroupBuilder.create(
-			new Identifier("pas", "food"))
+			new Identifier(MOD_ID, "food"))
 			.icon(() -> new ItemStack(Items.AIR))
 			.build();
 	
 	public static final ItemGroup PAS_BLOCK_GROUP = FabricItemGroupBuilder.create(
-			new Identifier("pas", "block"))
+			new Identifier(MOD_ID, "block"))
 			.icon(() -> new ItemStack(Items.COBBLED_DEEPSLATE))
+			.build();
+	public static final ItemGroup PAS_MISC_GROUP = FabricItemGroupBuilder.create(
+			new Identifier(MOD_ID, "block"))
+			.icon(() -> new ItemStack(PaSItems.DEV_LETSPLAYKEKS_ITEM))
 			.build();
 	
 	public static final Item COOKIE_DOUGH = new Item(new FabricItemSettings().group(PaSMainMod.PAS_FOOD_GROUP).maxCount(16));
@@ -39,10 +44,11 @@ public class PaSMainMod implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
+		PaSItems.registerModItems();
 		
 		Registry.register(Registry.BLOCK, new Identifier("the_curse", "test_item"), CURSE);
 		Registry.register(Registry.ITEM, new Identifier("the_curse", "test_item"), new BlockItem(CURSE, new FabricItemSettings().group(PaSMainMod.PAS_FOOD_GROUP)));
-		Registry.register(Registry.ITEM, new Identifier("pas", "cookie_dough"), new Item(new FabricItemSettings().group(PaSMainMod.PAS_FOOD_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cookie_dough"), new Item(new FabricItemSettings().group(PaSMainMod.PAS_FOOD_GROUP)));
 		
 				
 		LOGGER.info("Hello Fabric world!");
