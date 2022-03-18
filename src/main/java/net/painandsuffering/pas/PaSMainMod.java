@@ -32,7 +32,7 @@ public class PaSMainMod implements ModInitializer {
 			.icon(() -> new ItemStack(Items.COBBLED_DEEPSLATE))
 			.build();
 	public static final ItemGroup PAS_MISC_GROUP = FabricItemGroupBuilder.create(
-			new Identifier(MOD_ID, "block"))
+			new Identifier(MOD_ID, "misc"))
 			.icon(() -> new ItemStack(PaSItemsMisc.DEV_LETSPLAYKEKS))
 			.build();
 	

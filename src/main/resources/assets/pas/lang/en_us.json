@@ -1,9 +1,12 @@
 {
   "item.the_curse.test_item": "The Curse",
   "item.pas.dev_letsplaykeks": "LetsPlayKeks07 - Head Developer",
+  "item.pas.dev_uwuizlost": "UwU iz Lost - Design",
   "item.pas.dev_letsplaykeks": "FlyingFoxx - Design",
   "item.pas.cookie_dough": "Cookie Dough",
   "block.minecraft.bamboo": "Bamboob",
-  "itemGroup.pas_food.food": "Pain and Suffering Food",
+  "itemGroup.pas.food": "Pain and Suffering Food",
+  "itemGroup.pas.block": "Pain and Suffering Blocks",
+  "itemGroup.pas.misc": "Pain and Suffering Misc",
   "item.pas.my_awesome.item": "My Awesome Item"
 }
