@@ -19,6 +19,10 @@ public class PaSItemsMisc {
 			.maxCount(1)
 			.group(PaSMainMod.PAS_MISC_GROUP)
 			));
+	public static final Item DEV_ANNIKEN = registerItem("dev_anniken", new Item(new FabricItemSettings()
+			.maxCount(1)
+			.group(PaSMainMod.PAS_MISC_GROUP)
+			));
 	
 	
 	
