@@ -5,10 +5,10 @@
 
   "name": "Pain And Suffering Mod",
   "description": "A mod from the Pain and Suffering group.",
-  "authors": ["Me!"],
+  "authors": ["LetsPlayKeks07", "UwU iz Lost", "FlyingFoxx", "theTravelingPotato", "Anniken"],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/LetsPlayKeks/fabric-pain-and-suffering-mod-1.18"
   },
 
   "license": "CC0-1.0",
