@@ -1,4 +1,4 @@
-package net.painandsuffering.util;
+package net.painandsuffering.pas.util;
 
 import net.minecraft.nbt.NbtCompound;
 

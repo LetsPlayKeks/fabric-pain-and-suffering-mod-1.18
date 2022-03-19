@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NbtCompound;
-import net.painandsuffering.util.IEntityDataSaver;
+import net.painandsuffering.pas.util.IEntityDataSaver;
 
 @Mixin(Entity.class)
 public abstract class ModEntityDataSaver implements IEntityDataSaver{
