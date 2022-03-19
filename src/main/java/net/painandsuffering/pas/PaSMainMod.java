@@ -12,6 +12,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.painandsuffering.pas.util.ModCommandRegister;
+import net.painandsuffering.pas.util.ModEventsRegister;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,6 +47,9 @@ public class PaSMainMod implements ModInitializer {
 		PaSItems.registerModItems();
 		PaSFood.registerModFood();
 		PaSItemsMisc.registerModItems();
+		
+		ModCommandRegister.registerCommands();
+		ModEventsRegister.registerEvents();
 		
 		Registry.register(Registry.BLOCK, new Identifier("the_curse", "test_item"), CURSE);
 		Registry.register(Registry.ITEM, new Identifier("the_curse", "test_item"), new BlockItem(CURSE, new FabricItemSettings().group(PaSMainMod.PAS_FOOD_GROUP)));
