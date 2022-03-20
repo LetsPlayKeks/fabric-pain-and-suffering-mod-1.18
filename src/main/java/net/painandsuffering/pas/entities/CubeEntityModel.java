@@ -2,8 +2,6 @@ package net.painandsuffering.pas.entities;
 
 import org.spongepowered.include.com.google.common.collect.ImmutableList;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.model.ModelData;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.model.ModelPartData;
@@ -15,7 +13,6 @@ import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.EntityModelPartNames;
 import net.minecraft.client.util.math.MatrixStack;
 
-@Environment(EnvType.CLIENT)
 public class CubeEntityModel extends EntityModel<CubeEntity>{
 
 	private final ModelPart base;
