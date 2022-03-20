@@ -16,7 +16,8 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": ["net.painandsuffering.pas.PaSMainMod"]
+    "main": ["net.painandsuffering.pas.PaSMainMod"],
+	"client": ["net.painandsuffering.pas.PaSClientEntrypoint"]
   },
   "mixins": ["pas.mixins.json"],
 

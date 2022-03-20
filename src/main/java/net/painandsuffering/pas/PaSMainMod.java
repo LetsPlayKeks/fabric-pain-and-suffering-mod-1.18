@@ -4,14 +4,20 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.entity.EntityDimensions;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnGroup;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.painandsuffering.pas.entities.CubeEntity;
 import net.painandsuffering.pas.util.ModCommandRegister;
 import net.painandsuffering.pas.util.ModEventsRegister;
 
@@ -40,7 +46,9 @@ public class PaSMainMod implements ModInitializer {
 	
 	public static final Block CURSE = new Block(FabricBlockSettings.of(Material.SOIL).build());
 	
-
+	public static final EntityType<CubeEntity> CUBE = Registry.register(Registry.ENTITY_TYPE, new Identifier(PaSMainMod.MOD_ID, "cube"),
+			FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, CubeEntity::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build());
+	
 	
 	@Override
 	public void onInitialize() {
@@ -48,8 +56,10 @@ public class PaSMainMod implements ModInitializer {
 		PaSFood.registerModFood();
 		PaSItemsMisc.registerModItems();
 		
-		ModCommandRegister.registerCommands();
-		ModEventsRegister.registerEvents();
+		FabricDefaultAttributeRegistry.register(CUBE, CubeEntity.createMobAttributes());
+		
+		//ModCommandRegister.registerCommands();
+		//ModEventsRegister.registerEvents();
 		
 		Registry.register(Registry.BLOCK, new Identifier("the_curse", "test_item"), CURSE);
 		Registry.register(Registry.ITEM, new Identifier("the_curse", "test_item"), new BlockItem(CURSE, new FabricItemSettings().group(PaSMainMod.PAS_FOOD_GROUP)));

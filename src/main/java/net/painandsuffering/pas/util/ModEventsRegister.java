@@ -5,6 +5,6 @@ import net.painandsuffering.pas.events.PlayerEvents;
 
 public class ModEventsRegister {
 	public static void registerEvents() {
-		ServerPlayerEvents.COPY_FROM.register(new PlayerEvents());
+		//ServerPlayerEvents.COPY_FROM.register(new PlayerEvents());
 	}
 }
