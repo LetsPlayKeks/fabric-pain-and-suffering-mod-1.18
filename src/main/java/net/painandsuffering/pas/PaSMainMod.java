@@ -18,8 +18,8 @@ import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.painandsuffering.pas.entities.CubeEntity;
-import net.painandsuffering.pas.util.ModCommandRegister;
-import net.painandsuffering.pas.util.ModEventsRegister;
+//import net.painandsuffering.pas.util.ModCommandRegister;
+//import net.painandsuffering.pas.util.ModEventsRegister;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
